@@ -45,4 +45,9 @@
   color: white;
   font-family: 'Lato', sans-serif;
   position: relative;
+  overflow: hidden;
+}
+
+.text {
+  font-size: 24px;
 }

@@ -1,4 +1,4 @@
-import './ScrollButton.css';
+import './ScrollButton.scss';
 import arrow from './arrow.svg';
 
 function scroll(e) {

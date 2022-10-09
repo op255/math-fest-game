@@ -1,4 +1,4 @@
-import './Team.css';
+import './Team.scss';
 import {useState} from "react";
 
 function Team(props) {

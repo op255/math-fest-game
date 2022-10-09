@@ -1,15 +1,32 @@
-import './Game.css';
+import './Game.scss';
 import Team from "./Team";
+import BottomBar from "./BottomBar";
+import {useEffect, useState} from "react";
 
 function Game() {
+    const handleAddTeam = (event) => {
+      setTeams(prev => ([...prev, {id: prev.length + 1, name: event.detail}]));
+    };
+
+    useEffect(() => {
+        document.getElementById('game').addEventListener('add-team', handleAddTeam);
+
+        return () => {
+            document.getElementById('game').removeEventListener('add-team', handleAddTeam);
+        };
+    }, []);
+
+    const [teams, setTeams] = useState([]);
+
     return (
-        <div className="game">
+        <div id="game">
             <div className="container">
                 <div className="inner">
-                    <Team teamId={1} name={'UPS'}></Team>
-                    <Team teamId={2} name={'UPS asdfasdf'}></Team>
-                    <Team teamId={3} name={'UPS dasfasd asdfads'}></Team>
+                    {teams.map((team) => {
+                        return <Team key={ team.id } teamId={ team.id } name={ team.name }></Team>
+                    })}
                 </div>
+                <BottomBar />
             </div>
         </div>
     );
