@@ -3,6 +3,8 @@
     .inner {
         height: 100%;
         display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
         gap: 15px;
         padding: 50px 150px;
         color: #222;

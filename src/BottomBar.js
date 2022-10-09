@@ -11,14 +11,22 @@ function BottomBar() {
     const addTeam = () => {
         document.getElementById('game').dispatchEvent(new CustomEvent('add-team', {detail: teamName}));
         setTeamName('');
+        document.getElementById('name-inp').focus();
     };
 
 
     return (
         <div className="bottom-bar-container">
             <div className="bottom-bar">
-                <input type="text" className="team-name-inp text" placeholder="Имя комманды" value={teamName} onChange={handleChange}/>
-                <button className="add-team" onClick={addTeam}>+</button>
+                <input type="text"
+                       id="name-inp"
+                       className="team-name-inp text"
+                       placeholder="Имя комманды"
+                       value={ teamName }
+                       onChange={ handleChange }
+                       onKeyDown={(event) => { event.key === 'Enter' && addTeam() }}
+                />
+                <button className="add-team" onClick={ addTeam }>+</button>
             </div>
         </div>
     );
