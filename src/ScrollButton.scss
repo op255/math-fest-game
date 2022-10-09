@@ -1,14 +1,17 @@
-.scroll-btn {
+.btn {
     background-color: #ed453b;
     border: none;
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
     cursor: pointer;
     padding: 15px;
+
+    &.scroll-btn {
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+    }
 
     img {
         transform: rotate(90deg);
