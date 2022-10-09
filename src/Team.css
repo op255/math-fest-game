@@ -1,0 +1,35 @@
+.team {
+    width: 250px;
+    height: 150px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.team .text {
+    font-size: 24px;
+}
+
+.team .team-id {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.team .team-name {
+    width: 100%;
+    margin-block: auto;
+}
+
+.team .stats {
+    display: flex;
+    width: 100%;
+    height: 28px;
+}
+
+.stats .stren {
+    margin-right: auto;
+}
