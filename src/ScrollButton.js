@@ -11,7 +11,7 @@ function scroll(e) {
 
 function ScrollButton() {
     return (
-        <button className="scroll-btn" onClick={scroll}>
+        <button className="scroll-btn btn" onClick={scroll}>
             <img src={arrow} alt=""/>
         </button>
     );

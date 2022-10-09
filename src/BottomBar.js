@@ -1,6 +1,7 @@
 import './BottomBar.scss';
 import arrow from './arrow.svg';
 import rightArrow from './arrow-right.svg';
+import targetIcon from './target.svg'
 
 import {useState} from "react";
 
@@ -49,7 +50,7 @@ function BottomBar() {
             </div>
             <button className="btn bottom-btn" onClick={gameStarted ? () => {
             } : startGame}>
-                <img src={arrow} alt=""/>
+                <img className={gameStarted && 'target-icon'} src={gameStarted ? targetIcon : arrow} alt=""/>
             </button>
         </div>
     );
