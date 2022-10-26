@@ -8,6 +8,10 @@
     display: flex;
     flex-direction: column;
 
+    &.died {
+        background: #f2aaaa;
+    }
+
     .team-id {
         position: absolute;
         top: 10px;

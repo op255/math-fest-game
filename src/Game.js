@@ -1,10 +1,16 @@
 import './Game.scss';
 import Team from "./Team";
 import BottomBar from "./BottomBar";
+import Log from './Log';
 import {useState} from "react";
 
 function Game() {
     const [teams, setTeams] = useState([]);
+    const [log, setLog] = useState([]);
+
+    const logger = (msg) => {
+        setLog([...log, {id: log.length, text: msg}]);
+    };
 
     const handleAddTeam = (teamName) => {
         setTeams(teams.concat({
@@ -42,11 +48,13 @@ function Game() {
             shooter.numOfHits += 1;
 
             console.log('Shooter ', shooter.name, ' will hit ', target.name, ' by ', damage);
+            logger(`Shooter ${shooter.name} hit ${target.name} by ${damage}`);
         }
         else {
             shooter.numOfMiss += 1;
 
             console.log('Shooter ', shooter.name, ' missed!');
+            logger(`Shooter ${shooter.name} missed!`);
         }
 
         shooter.accuracy = Math.round(100 * shooter.numOfHits / (shooter.numOfHits + shooter.numOfMiss)) / 100;
@@ -67,6 +75,7 @@ function Game() {
                         />
                     })}
                 </div>
+                <Log log={log} />
                 <BottomBar
                     handleStart={handleStart}
                     handleShoot={handleShoot}
