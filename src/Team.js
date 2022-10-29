@@ -2,6 +2,8 @@ import './Team.scss';
 import Avatar from 'boring-avatars';
 
 function Team(props) {
+    const accuracyText = String(props.accuracy*100).split('.')[0];
+
     return (
         <div className={props.alive ? 'team' : 'team died'}>
             <div className="top-part">
@@ -23,7 +25,7 @@ function Team(props) {
                     </span>
                     <span className='accur text stat-item'>
                         <span className="label">Точность</span>
-                        <span className="value">{props.accuracy*100}%</span>
+                        <span className="value">{accuracyText}%</span>
                     </span>
                 </div>
             </div>
