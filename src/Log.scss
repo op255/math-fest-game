@@ -20,6 +20,10 @@
     .log-item {
         //transform: translateX(-500px);
         transition: all ease-in-out .2s;
+        .name-av {
+            display: inline-flex;
+            gap: 4px;
+        }
         //margin-left: 500px;
     }
 

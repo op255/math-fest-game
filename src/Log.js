@@ -1,4 +1,5 @@
 import './Log.scss';
+import Avatar from 'boring-avatars';
 
 function Log(props) {
     return (
@@ -9,7 +10,33 @@ function Log(props) {
                         className="log-item"
                         key={logItem.id}
                     >
-                        {logItem.text}
+                        <span className="name-av">
+                            <Avatar
+                                size={20}
+                                name={logItem.shooter}
+                                variant="beam"
+                            />
+                            {logItem.shooter}
+                        </span>
+                        {logItem.isHit
+                            ? (
+                                <>
+                                    <span> hit </span>
+                                    <span className="name-av">
+                                        <Avatar
+                                            size={20}
+                                            name={logItem.target}
+                                            variant="beam"
+                                        />
+                                        {logItem.target}
+                                    </span>
+                                    <span> by {logItem.damage}</span>
+                                </>
+                            )
+                            : (
+                                <span> missed!</span>
+                            )
+                        }
                     </div>
                 })}
             </div>

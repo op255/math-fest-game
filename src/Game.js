@@ -8,8 +8,8 @@ function Game() {
     const [teams, setTeams] = useState([]);
     const [log, setLog] = useState([]);
 
-    const logger = (msg) => {
-        setLog([...log, {id: log.length, text: msg}]);
+    const logger = (isHit, shooter, target = null, damage = null) => {
+        setLog([...log, {id: log.length, isHit, shooter, target, damage}]);
     };
 
     const handleAddTeam = (teamName) => {
@@ -46,11 +46,13 @@ function Game() {
             }
 
             shooter.numOfHits += 1;
-            logger(`${shooter.name} hit ${target.name} by ${damage}`);
+            logger(true, shooter.name, target.name, damage);
+            console.log(true, shooter.name, target.name, damage);
         }
         else {
             shooter.numOfMiss += 1;
-            logger(`${shooter.name} missed!`);
+            logger(false, shooter.name);
+            console.log(false, shooter.name);
         }
 
         shooter.accuracy = Math.round(100 * shooter.numOfHits / (shooter.numOfHits + shooter.numOfMiss)) / 100;
