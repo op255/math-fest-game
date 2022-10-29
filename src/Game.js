@@ -46,15 +46,11 @@ function Game() {
             }
 
             shooter.numOfHits += 1;
-
-            console.log('Shooter ', shooter.name, ' will hit ', target.name, ' by ', damage);
-            logger(`Shooter ${shooter.name} hit ${target.name} by ${damage}`);
+            logger(`${shooter.name} hit ${target.name} by ${damage}`);
         }
         else {
             shooter.numOfMiss += 1;
-
-            console.log('Shooter ', shooter.name, ' missed!');
-            logger(`Shooter ${shooter.name} missed!`);
+            logger(`${shooter.name} missed!`);
         }
 
         shooter.accuracy = Math.round(100 * shooter.numOfHits / (shooter.numOfHits + shooter.numOfMiss)) / 100;
@@ -77,6 +73,7 @@ function Game() {
                 </div>
                 <Log log={log} />
                 <BottomBar
+                    isStartDisabled={teams.length < 2}
                     handleStart={handleStart}
                     handleShoot={handleShoot}
                     handleAddTeam={handleAddTeam}

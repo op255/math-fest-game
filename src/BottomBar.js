@@ -23,6 +23,9 @@ function BottomBar(props) {
         document.getElementById('name-inp').focus();
     };
     const startGame = () => {
+        if (props.isStartDisabled) {
+            return;
+        }
         props.handleStart();
         setGameStarted(true);
         setWidth('300px');
@@ -62,7 +65,7 @@ function BottomBar(props) {
                     </div>
                 }
             </div>
-            <button className="btn bottom-btn" onClick={gameStarted ? shoot : startGame}>
+            <button className={`btn bottom-btn ${props.isStartDisabled ? 'disabled' : ''}`} onClick={gameStarted ? shoot : startGame}>
                 <img className={gameStarted ? 'target-icon' : ''} src={gameStarted ? targetIcon : arrow} alt=""/>
             </button>
         </div>
