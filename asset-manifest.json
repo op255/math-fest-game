@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/math-fest-game/static/css/main.e9ec6f28.css",
+    "main.css": "/math-fest-game/static/css/main.b916607f.css",
     "main.js": "/math-fest-game/static/js/main.1e2dd017.js",
     "static/js/787.61ffe815.chunk.js": "/math-fest-game/static/js/787.61ffe815.chunk.js",
     "static/media/logo.png": "/math-fest-game/static/media/logo.05bbfa168b7d380f5d0c.png",
@@ -8,12 +8,12 @@
     "static/media/arrow.svg": "/math-fest-game/static/media/arrow.64a024e09834a703885277c6ac6a84c9.svg",
     "static/media/target.svg": "/math-fest-game/static/media/target.adf7f987d3fde004fcc3a56ccfe0c6cd.svg",
     "static/media/arrow-right.svg": "/math-fest-game/static/media/arrow-right.afcfb55a1994393f1a86aa7b91b5d1d7.svg",
-    "main.e9ec6f28.css.map": "/math-fest-game/static/css/main.e9ec6f28.css.map",
+    "main.b916607f.css.map": "/math-fest-game/static/css/main.b916607f.css.map",
     "main.1e2dd017.js.map": "/math-fest-game/static/js/main.1e2dd017.js.map",
     "787.61ffe815.chunk.js.map": "/math-fest-game/static/js/787.61ffe815.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9ec6f28.css",
+    "static/css/main.b916607f.css",
     "static/js/main.1e2dd017.js"
   ]
 }
