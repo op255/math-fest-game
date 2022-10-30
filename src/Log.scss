@@ -41,6 +41,8 @@
     flex-direction: column-reverse;
     overflow: hidden;
     z-index: 2;
+    pointer-events: none;
+
     div {
         width: 100%;
         height: 5px;
