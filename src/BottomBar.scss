@@ -7,6 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all ease-in-out 0.2s;
+  overflow: hidden;
 
   .bottom-bar {
     background: white;
@@ -37,6 +39,26 @@
       align-items: center;
       gap: 40px;
 
+      .ans-text {
+        color: #222;
+      }
+
+      .btn {
+        width: 50px;
+
+        &.true-ans {
+          background-color: #51c351;
+        }
+
+        img {
+          transform: rotate(0deg);
+          filter: invert(1);
+          width: 25px;
+          margin-top: -2px;
+          margin-left: -2px;
+        }
+      }
+
       .shot-inp {
         height: 50px;
         width: 50px;
@@ -51,6 +73,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity ease-in-out 0.2s;
     img.target-icon {
       transform: rotate(180deg);
     }

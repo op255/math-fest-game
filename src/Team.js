@@ -5,7 +5,7 @@ function Team(props) {
     const accuracyText = String(props.accuracy*100).split('.')[0];
 
     return (
-        <div className={props.alive ? 'team' : 'team died'}>
+        <button className={props.alive ? 'team' : 'team died'} onClick={props.handleSelectTeam} data-team-id={props.teamId}>
             <div className="top-part">
                 <div className="avatar">
                     <Avatar
@@ -24,13 +24,13 @@ function Team(props) {
                         <span className="value">{props.strength}</span>
                     </span>
                     <span className='accur text stat-item'>
-                        <span className="label">Точность</span>
+                        <span className="label">Меткость</span>
                         <span className="value">{accuracyText}%</span>
                     </span>
                 </div>
             </div>
 
-        </div>
+        </button>
     );
 }
 

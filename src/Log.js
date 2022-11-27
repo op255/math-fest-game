@@ -21,7 +21,7 @@ function Log(props) {
                         {logItem.isHit
                             ? (
                                 <>
-                                    <span> hit </span>
+                                    <span> нанёс </span>
                                     <span className="name-av">
                                         <Avatar
                                             size={20}
@@ -30,11 +30,11 @@ function Log(props) {
                                         />
                                         {logItem.target}
                                     </span>
-                                    <span> by {logItem.damage}</span>
+                                    <span> {logItem.damage} урона</span>
                                 </>
                             )
                             : (
-                                <span> missed!</span>
+                                <span> - промах!</span>
                             )
                         }
                     </div>
