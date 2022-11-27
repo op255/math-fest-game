@@ -9,6 +9,13 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 3px 3px #22222222;
+    transition: all ease-in-out 0.2s;
+    border: none;
+
+    &:hover, &.selected {
+        box-shadow: 0 0 5px 5px rgb(32 32 32 / 50%);
+        transform: scale(1.05);
+    }
 
     .top-part {
         display: flex;
@@ -24,6 +31,11 @@
 
     &.died {
         background: #f2aaaa;
+        pointer-events: none;
+
+        &:hover {
+            transform: none;
+        }
     }
 
 
